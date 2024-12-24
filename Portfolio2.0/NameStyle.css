@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.name{
+    color:white;
+    margin-left: 40%;
+    margin-top: 5%;
+}
+.speaker-icon {
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+.speaker-icon:hover {
+    color: #ff69b4; /* Example hover color */
+}
+p{
+    color: white;
+    margin-left: 20%;
+}

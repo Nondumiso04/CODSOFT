@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="NameStyle.css">
+        <script src="https://kit.fontawesome.com/ee131e7bcf.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        
+        <h1 class="name">
+           Nokuthula
+           <span class="speaker-icon" onclick="pronounceName()">🔊</span>
+        </h1>
+
+        <p>
+            beautiful and meaningful name of Zulu origin, signifying peace and tranquility. It is primarily used as a 
+            female<br> name and holds significant cultural value in Zulu communities. The name carries a sense of serenity
+             and is often<br> chosen for its positive connotations.
+        </p>
+
+        <script>
+            function pronounceName() {
+                const utterance = new SpeechSynthesisUtterance("Nokootoola");
+                utterance.lang = "en-ZA"; // Adjust to the preferred language code, e.g., "zu-ZA" for Zulu
+                speechSynthesis.speak(utterance);
+            }
+        </script>
+
+    </body>
+</html>

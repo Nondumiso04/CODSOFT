@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /*background: linear-gradient(to bottom, #ffc0cb, #ff69b4); /* Pink ombre background */
+}
+
+.calculator {
+    background-color:pink; 
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 260px;
+    overflow: hidden;
+    padding: 10px 15px;
+}
+
+.display {
+    background-color: #e6f7ff; /* Light display background */
+    color: #000;
+    font-size: 2em;
+    text-align: right;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2); /* 3D inset effect */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    font-size: 1.2em;
+    background-color: #ffffff; /* White buttons */
+    border: none;
+    color: black;
+    border-radius: 10px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Button shadow for depth */
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #cce7ff;
+    transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+.operator {
+    background-color: #bb1e8e; /* Yellow operator buttons */
+    color: #000;
+}
+
+.operator:hover {
+    background-color: #cce7ff;
+}
+
+#equals {
+    grid-column: span 2;
+    background-color: #28a745; /* Green equals button */
+    color: #fff;
+    height: 50px;
+    font-weight: bold;
+}
+
+#equals:hover {
+    background-color: #218838;
+}
+
+#clear {
+    grid-column: span 4;
+    background-color: #dc3545; /* Red clear button */
+    color: #fff;
+    height: 50px;
+    font-weight: bold;
+}
+
+#clear:hover {
+    background-color: #c82333;
+}
+
+
+

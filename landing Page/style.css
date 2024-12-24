@@ -1,0 +1,631 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #dbd5cb;
+    
+  }
+  header {
+    background: #f8f0e3;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    color: #5A3E36;
+
+  }
+  .C-highlight{
+    color: #B88A44;
+
+  }
+  nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #5A3E36;
+  }
+
+  nav ul {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 8%; 
+    left: 50.5%; 
+}
+
+nav ul li {
+    display: inline; 
+    margin-left: 30px;
+    font-size: 20px;
+    color: #5A3E36;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #5A3E36;
+}
+
+nav ul li a:hover {
+  color: #B88A44;
+}
+  
+.home h3 {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    font-size: 46px;
+    color: #5A3E36;
+  }
+.home h2 {
+    position: absolute;
+    top: 57%;
+    left: 5%;
+    font-size: 46px;
+    color: #5A3E36;
+  }
+.home button{
+    position: absolute;
+    top: 70%;
+    left: 12%;
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #dc8ea7;
+    background-color: rgb(234, 197, 203);
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.5s;
+  }
+.positioned-image {
+    position: relative;
+    margin-left: 42%;
+    max-width: 60%;
+    margin-top: 2%;
+    height:15%;
+  }
+.About-us h1{
+    color: #5A3E36;
+    font-size: 34px;
+    position: absolute;
+    left: 2%;
+   
+  }
+.about-image{
+    position: absolute;
+    height: 100%;
+    width: 35%;
+    margin-top: 7%;
+    margin-left: 2%;
+  }
+.About-us p{
+    position: absolute;
+    left:40%;
+    top:150%;
+    color: #5A3E36;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 1.8;
+    font-size: 100%;
+  }
+.Our-Collection h1{
+    color: #5A3E36;
+    font-size: 34px;
+    position: absolute;
+    left: 2%;
+    top:240%
+  }
+.Our-Collection p{
+    color: #5A3E36;
+    position: absolute;
+    left: 2%;
+    top:250%;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 1.8;
+    font-size: 100%;
+  }
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px;
+    position: absolute;
+    top: 260%;
+  }
+  
+.card {
+    background-color: #f9f6f1; 
+    border: 1px solid #dbd5cb;
+    border-radius: 8px;
+    width: 200px; 
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+.card:hover {
+    transform: scale(1.05);
+  }
+  
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  
+.card h3 {
+    font-family: 'Playfair Display', serif;
+    color: #5A3E36;
+    margin-bottom: 10px;
+  }
+  
+.card p {
+    font-size: 14px;
+    color: #7b6d63;
+    margin-bottom: 15px;
+  }
+  
+.card button {
+    background-color: #5A3E36;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+.card button:hover {
+    background-color: #3c2923;
+  }
+
+
+.reviews {
+    padding: 40px;
+    text-align: center;
+    border-top: 1px solid #dbd5cb;
+    margin-top: 100%;
+  }
+  
+  .reviews h2 {
+    font-family: 'Playfair Display', serif;
+    color: #5A3E36;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: black;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+    color: black;
+}
+
+.carousel-btn.next {
+    right: 10px;
+    color: black;
+}
+ 
+.review-container {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out; 
+    will-change: transform; 
+
+}
+  
+.review {
+    background-color: #fff;
+    border: 1px solid #dbd5cb;
+    border-radius: 8px;
+    padding: 20px;
+    min-width: 250px; 
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+.review p {
+    font-style: italic;
+    color: #7b6d63;
+    margin: 15px 0;
+  }
+  
+  .review h4 {
+    font-size: 14px;
+    color: #5A3E36;
+    font-weight: bold;
+  }
+  
+.review-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 2px solid #dbd5cb;
+  }
+  
+.contact-desc{
+    position: absolute;
+    top: 425%;
+    color: #5A3E36;
+    margin-left: 2%;
+    text-underline-position: below;
+}
+.contact-desc2{
+    position: absolute;
+    top: 435%;
+    font-size: 20px;
+    color: #5A3E36;
+    margin-left: 2%;
+    font-size: 15px;
+    font-size: 100%;
+}
+.contact-container{
+    position: absolute;
+    top: 450%;
+    left: 2%;
+}
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+.contact-input{
+  width: 400px;
+  height: 50px;
+  outline:none;
+  padding-left: 50px;
+  font-weight: 500;
+  
+}
+.contact-form textarea{
+  height: 100px;
+}
+.contact-input:focus{
+  border: 2px solid #5A3E36;
+}
+.contact-input::placeholder{
+  color:black;
+}
+.contact-form button{
+    position: absolute;
+    top: 105%;
+    left: 30%;
+    color: black; 
+    border: 1px solid #dc8ea7;
+    background-color: rgb(234, 197, 203);
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    display: inline-block; 
+    transition: background 0.5s;
+
+}
+.toggle-icon {
+  display: none;
+  color: white;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 30px;
+  margin-left: auto;
+  color: white;
+  margin-left: 90%;
+  margin-top: 0%;
+}
+
+  
+  footer {
+    background-color: #f9f6f1;
+    color: #5A3E36;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40%;
+  }
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 15px;
+    color: #5A3E36;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color:#ff004f;
+    transform: translateY(-5px);
+}
+
+@media only screen and (max-width: 768px){
+  ul {
+    flex-direction: column; 
+    display: none; 
+    position: absolute;
+    top: 50px; 
+    left: 0;
+    width: 100%;
+    z-index: 20; 
+    
+  }
+
+  ul.active {
+    display: flex; 
+  }
+
+  .hamburger {
+    display: block; 
+  }
+
+  li {
+    text-align: center; 
+  }
+  .positioned-image{
+    width: 55%;
+    height: 75%;
+    margin-left: 45%;
+  }
+  .home h3 {
+ 
+    font-size: 29px;
+  }
+  .home h2 {
+   
+    font-size: 29px;
+  }
+  .home button{
+    position: absolute;
+    top: 65%;
+    left: 8%;
+    height: 10%;
+    width: fit-content;
+  }
+  .about-image{
+    position: absolute;
+    top: 105%;
+    height: 85%;
+    width: 35%;
+  }
+  .About-us p{
+    position: absolute;
+    left:40%;
+    top:114%;
+    font-size: 12px;
+    line-height: 1.8;
+   
+  }
+  .Our-Collection h1{
+    position: absolute;
+    top:200%
+  }
+  .Our-Collection p{
+    position: absolute;
+    top:210%;
+  }
+  .card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px;
+    position: absolute;
+    top: 225%;
+  }
+  .reviews h2 {
+    position: absolute;
+    top: -10%;
+  }
+  .reviews{
+    position: absolute;
+    top: 260%;
+  }
+  .contact-desc{
+    position: absolute;
+    top:490%;
+  }
+  .contact-desc2{
+    position: absolute;
+    top:500%;
+  }
+  .contact-container{
+    position: absolute;
+    top:510%;
+  }
+  footer {
+    margin-top: 320%;
+  }
+
+}
+
+@media only screen and (max-width: 420px){
+  nav ul.show {
+    display: flex;
+  }
+
+nav ul li {
+    margin: 10px 0;
+    font-size: 15px;
+    text-align: left;
+    margin-left: auto;
+    margin-left: 20%;
+  }
+
+.hamburger {
+    display: block;
+    color: black;
+  }
+  .home h3 {
+    font-size: 16px;
+    position: absolute;
+    top: 30%;
+  }
+  .home h2 {
+    font-size: 16px;
+    position: absolute;
+    top: 35%;
+  }
+  .home button{
+    position: absolute;
+    top: 35%;
+    left: 4%;
+    height: 9%;
+    width: 10%;
+  }
+  .about-image{
+    position: absolute;
+    top: 75%;
+    height: 37%;
+    width: 35%;
+  }
+  .About-us p{
+    position: absolute;
+    left:40%;
+    top:77%;
+    font-size: 7px;
+    line-height: 1.8;
+  }
+  .Our-Collection h1{
+    position: absolute;
+    top:120%
+  }
+  .Our-Collection p{
+    position: absolute;
+    top:133%;
+    font-size: 7px;
+  }
+  .card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px;
+    position: absolute;
+    top: 140%;
+  }
+  .card {
+    width: 80px; 
+  }
+  .Our-Collection h1{
+    position: absolute;
+    top:120%
+  }
+  .reviews h2 {
+    position: absolute;
+    top: -10%;
+  }
+  .reviews{
+    position: absolute;
+    top: 190%;
+  }
+  .contact-desc{
+    position: absolute;
+    top:350%;
+  }
+  .contact-desc2{
+    position: absolute;
+    top:360%;
+  }
+  .contact-container{
+    position: absolute;
+    top:380%;
+  }
+  .contact-input{
+    width: 160px;
+    height: 30px;
+    
+  }
+  .contact-form textarea{
+    height: 100px;
+  }
+  footer {
+    margin-top: 450%;
+  }
+  
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  
+  .about-image {
+    width: 70%; 
+  }
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  .review-container {
+    gap: 15px; 
+  }
+}
+
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .hamburger {
+    display: block; 
+  }
+  #sidemenu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #f8f0e3;
+    flex-direction: column;
+  }
+  .card-container {
+    grid-template-columns: 1fr; 
+  }
+}
+
+
+@media (max-width: 479px) {
+  header h1 {
+    font-size: 24px; 
+  }
+  .about-image {
+    width: 90%; 
+  }
+  .card {
+    margin: 10px auto; 
+  }
+  .review-container {
+    flex-direction: column; 
+    transform: translateX(0) 
+  }
+  .carousel-btn {
+    display: none; 
+  }
+  footer {
+    font-size: 12px; 
+  }
+}
+

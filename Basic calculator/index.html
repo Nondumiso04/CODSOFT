@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <div id="display" class="display">0</div>
+        <div class="buttons">
+            <button class="btn" data-value="7">7</button>
+            <button class="btn" data-value="8">8</button>
+            <button class="btn" data-value="9">9</button>
+            <button class="btn operator" data-value="/">÷</button>
+
+            <button class="btn" data-value="4">4</button>
+            <button class="btn" data-value="5">5</button>
+            <button class="btn" data-value="6">6</button>
+            <button class="btn operator" data-value="*">×</button>
+
+            <button class="btn" data-value="1">1</button>
+            <button class="btn" data-value="2">2</button>
+            <button class="btn" data-value="3">3</button>
+            <button class="btn operator" data-value="-">−</button>
+
+            <button class="btn" data-value="0">0</button>
+            <button class="btn" data-value=".">.</button>
+            <button class="btn" id="equals">=</button>
+            <button class="btn operator" data-value="+">+</button>
+
+            <button class="btn" id="clear">AC</button>
+        </div>
+    </div>
+
+
+    <script>
+        const display = document.getElementById('display');
+        const buttons = document.querySelectorAll('.btn');
+        let currentInput = '';
+        let previousInput = '';
+        let operator = '';
+
+       buttons.forEach(button => {
+       button.addEventListener('click', () => {
+        const value = button.dataset.value;
+
+        if (value === undefined) {
+            if (button.id === 'clear') {
+                clearCalculator();
+            } else if (button.id === 'equals') {
+                calculate();
+            }
+        } else if ('+-*/'.includes(value)) {
+            setOperator(value);
+        } else {
+            appendNumber(value);
+        }
+    });
+});
+
+function appendNumber(number) {
+    if (currentInput === '0' && number === '0') return;
+    if (currentInput === '0' && number !== '.') currentInput = '';
+    currentInput += number;
+    updateDisplay(currentInput);
+}
+
+function setOperator(op) {
+    if (currentInput === '') return;
+    if (previousInput !== '') calculate();
+    operator = op;
+    previousInput = currentInput;
+    currentInput = '';
+}
+
+function calculate() {
+    if (operator === '' || currentInput === '') return;
+
+    const num1 = parseFloat(previousInput);
+    const num2 = parseFloat(currentInput);
+
+    if (isNaN(num1) || isNaN(num2)) return;
+
+    let result;
+    switch (operator) {
+        case '+': result = num1 + num2; break;
+        case '-': result = num1 - num2; break;
+        case '*': result = num1 * num2; break;
+        case '/': result = num2 !== 0 ? num1 / num2 : 'Error'; break;
+    }
+
+    currentInput = result.toString();
+    operator = '';
+    previousInput = '';
+    updateDisplay(currentInput);
+}
+
+function updateDisplay(value) {
+    display.textContent = value;
+}
+
+function clearCalculator() {
+    currentInput = '0';
+    previousInput = '';
+    operator = '';
+    updateDisplay(currentInput);
+}
+
+    </script>
+
+</body>
+</html>
